@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    {{destination.city}}
+{% endblock %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static "destinations/styles/post-detail.css" %}" />
+{% endblock %}
+
+{% block content %}
+<section id="summary">
+    <h2>{{destination.city}}</h2>
+    <h3>{{destination.country}}</h3>
+
+    {% if destination.is_beach %}
+        <img id="icon" src="{% static "destinations/images/beach-light.svg" %}" alt"beach"/>
+    {% endif %}
+
+    {% if destination.are_mountains %}
+        <img id="icon" src="{% static "destinations/images/mountains-light.svg" %}" alt"beach"/>
+    {% endif %}
+
+
+    <article>
+        <img src="{% static "destinations/images/"|add:destination.city|add:".jpg" %}" alt={{destination.city}}>
+    </article>
+    
+
+</section>
+
+<main>
+    <p>
+        <b>About {{destination.city}}:</b>
+        {{destination.description|linebreaks}}
+        <div id="details">
+            <b>Average price of 3* hotel per night:</b> {{destination.hotel_price}} EUR
+            <br>
+            <b>Average year temperature: </b> {{destination.avg_year_temp}} °C
+            <br>
+            <b>Top attractions: </b> {{destination.top_attractions}}
+        </div>
+    </p>
+
+
+</main>
+{% endblock %}

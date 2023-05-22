@@ -1,0 +1,29 @@
+{% load static %}
+
+<li>
+    <article class="post">
+        <a href="{% url 'destination-detail-page' slug=item.slug %}">
+            <img src="{% static "destinations/images/"|add:item.city|add:".jpg" %}" alt"{{ item.city }}" />
+            <div class="post__content">
+                <h3>{{ item.city }} <br> {{ item.country }}</h3> 
+                <p>
+                    3* Hotel avg. price: {{ item.hotel_price }} EUR
+                    <br>
+                    <b>Top attractions:</b>
+                    <br>
+                    {{ item.top_attractions }}
+                    <br>
+
+                    {% if item.is_beach %}
+                    <img id="icon" src="{% static "destinations/images/beach.svg" %}" alt"beach"/>
+                    {% endif %}
+
+                    {% if item.are_mountains %}
+                    <img id="icon" src="{% static "destinations/images/mountains.svg" %}" alt"beach"/>
+                    {% endif %}
+
+                </p>
+            </div>
+        </a>
+    </article>
+</li>

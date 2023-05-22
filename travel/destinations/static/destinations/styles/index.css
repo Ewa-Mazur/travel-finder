@@ -1,0 +1,84 @@
+#welcome {
+  background: linear-gradient(to right top, #33539E, #A5678E);
+  padding: 6rem 12%;
+}
+
+#welcome header {
+  display: flex;
+  align-items: flex-start;
+  margin: 3rem auto;
+}
+
+#welcome img {
+  display: inline-block;
+}
+
+#welcome h2 {
+  font-size: 3rem;
+  margin: 2.5rem 0 0 2rem;
+  color: #e4e4e4;
+  width: 40rem;
+}
+
+#welcome p {
+  color: white;
+  font-size: 1.5rem;
+}
+
+#latest-posts {
+  background-color: #bfb8da;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 60rem;
+  margin: -6rem auto 2rem auto;
+  box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.4);
+}
+
+#latest-posts h2 {
+  text-align: center;
+  color: white;
+}
+
+#latest-posts ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+}
+
+#latest-posts li {
+  flex: 1;
+}
+
+#travel-search {
+  background-color: #bfb8da;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 60rem;
+  margin: auto auto 2rem auto;
+  box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.4);
+}
+
+#travel-search h2 {
+  text-align: center;
+  color: white;
+}
+
+
+#about {
+  text-align: center;
+  padding: 1rem;
+  background-color: #33539E;
+  margin-top: 5rem;
+}
+
+#about h2 {
+  font-size: 1.5rem;
+  color: #7FACD6;
+}
+
+#about p {
+  font-size: 1rem;
+  color: #7FACD6;
+}

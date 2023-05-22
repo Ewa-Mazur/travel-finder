@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    Travel
+{% endblock %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static "destinations/styles/index.css" %}" />
+    <link rel="stylesheet" href="{% static "destinations/styles/destination.css" %}" />
+    <link rel="stylesheet" href="{% static "destinations/styles/destinations-preview.css" %}" />
+{% endblock %}
+
+{% block content %}
+
+    <section id="welcome">
+        <header>
+            <img src="{% static "destinations/images/plane.svg"%}" alt="plane - traveling app"/>
+            <br>
+            <h2>Travel destination finder</br>
+        </header>
+    </section>
+
+    <section id="latest-posts">
+        <h2>Lucky search:</h2>
+
+        <ul>
+            {% for item in random_items %}
+                {% include "destinations/includes/single-destination-preview.html"%}
+            {% endfor %}
+        </ul>
+
+    </section>
+
+    <section id="travel-search">
+        <h2>Search for your dream travel destination!</h2>
+
+        <p>Click the button to get your coordinates.</p>
+
+    <button onclick="getLocation()">Try It</button>
+
+    <p id="demo"></p>
+
+    <script>
+    var x = document.getElementById("demo");
+
+    function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else { 
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+    }
+
+    function showPosition(position) {
+    x.innerHTML = "Latitude: " + position.coords.latitude + 
+    "<br>Longitude: " + position.coords.longitude;
+    }
+    </script>
+
+    </section>
+
+    <section id="about">
+        <h2>About</h2>
+        <p>I'm Ewa Mazur, aspiring developer. This site made in Django with SQLite database is created for portfolio puropuses.
+            <br> 
+            Information regarding destinations was created with support of Chat GPT.</p>
+    </section>
+
+
+    
+{% endblock %}

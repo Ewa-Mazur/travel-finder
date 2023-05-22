@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    All places to visit
+{% endblock %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static "destinations/styles/destination.css" %}" />
+    <link rel="stylesheet" href="{% static "destinations/styles/all-destinations.css" %}" />
+{% endblock %}
+
+{% block content %}
+<section id="all-posts">
+    <br>
+    <h2>List of the all places you can visit!</h2>
+    <br>
+    <ul>
+        {% for item in all_places %}
+            {% include "destinations/includes/single-destination-preview.html"%}
+        {% endfor %}
+    </ul>
+</section>
+{% endblock %}
