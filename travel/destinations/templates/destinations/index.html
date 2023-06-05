@@ -32,31 +32,8 @@
 
     </section>
 
-    <section id="travel-search">
-        <h2>Search for your dream travel destination!</h2>
-
-        <p>Click the button to get your coordinates.</p>
-
-    <button onclick="getLocation()">Try It</button>
-
-    <p id="demo"></p>
-
-    <script>
-    var x = document.getElementById("demo");
-
-    function getLocation() {
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(showPosition);
-    } else { 
-        x.innerHTML = "Geolocation is not supported by this browser.";
-    }
-    }
-
-    function showPosition(position) {
-    x.innerHTML = "Latitude: " + position.coords.latitude + 
-    "<br>Longitude: " + position.coords.longitude;
-    }
-    </script>
+    <section class="travel-search">
+        <a href="{% url 'travel-search' %}">Click hear to search for your dream travel destination!</a>
 
     </section>
 

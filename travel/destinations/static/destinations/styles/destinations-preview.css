@@ -7,6 +7,15 @@ body {
     width: 90%;
     max-width: 60rem;
   }
+
+  #all-posts2 {
+    background-color: #bfb8da;
+    padding: 2rem;
+    border-radius: 12px;
+    width: 60rem;
+    margin: -6rem auto 2rem auto;
+    box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.4);
+  }
   
   #all-posts h2 {
     text-align: center;
@@ -14,6 +23,7 @@ body {
     color: #e4e4e4;
     margin: 1rem 0;
   }
+
   
   ul {
     list-style: none;

@@ -30,6 +30,12 @@ h3 {
   position: absolute;
   top: 0;
   left: 0;
+  
+}
+
+#main-navigation nav {
+  text-align: right;
+  
 }
 
 #main-navigation a {
@@ -40,7 +46,7 @@ h3 {
 
 #main-navigation a:hover,
 #main-navigation a:active {
-  color: #A5678E;
+  color: #bfb8da;
 }
 
 #main-navigation h1 a:hover,
