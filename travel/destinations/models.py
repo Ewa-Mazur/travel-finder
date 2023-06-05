@@ -1,8 +1,7 @@
 from django.db import models
 
-# Create your models here.
 class Continent(models.Model):
-    # relation many to many - w kraju może być wydane wiele ksiażek, a dana ksiażka może być wydana w wielu krajach
+    # relation many to many 
     name = models.CharField(max_length=80)
     
     def __str__(self):
@@ -12,7 +11,7 @@ class Continent(models.Model):
 class Destination(models.Model):
     city = models.CharField(max_length=100)
     country = models.CharField(max_length=100)
-    continent = models.ManyToManyField(Continent)
+    continent = models.ManyToManyField(Continent,)
     latitude = models.FloatField()
     longitude = models.FloatField()
     avg_year_temp = models.IntegerField()

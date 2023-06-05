@@ -1,0 +1,103 @@
+  form {
+    margin: 2rem auto;
+    width: 100%;
+    padding: 1.5rem 1rem;
+  
+  }
+  
+  button {
+    cursor: pointer;
+    padding: 0.5rem 1.0rem;
+    border-radius: 7px;
+    background-color:#A5678E;
+    color: #e4e4e4;
+    border: 1px solid #975e82;
+    text-align: center;
+    margin: 0 0.5rem;
+    
+  
+  }
+  
+  button:hover,
+  button:active {
+    background-color: #33539E;
+    border-color: #33539E;
+  
+  }
+
+  .button-container {
+    display: flex; 
+    justify-content: center; 
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+  
+  .form-control, .checkbox {
+    margin-bottom: 1rem;
+  }
+  
+  .form-control input {
+    font: inherit;
+    padding: 0.25rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    display: block;
+    width: 15rem;
+  }
+  
+  .form-control input:focus {
+    border-color: #33539E;
+    outline: none;
+    background-color: #e3e9ee;
+  }
+  
+  .form-control label,
+   .checkbox label {
+    color: white;
+    line-height: 1.6;
+  }
+
+  .container {
+    padding: 0px;
+    height: 10rem;
+    margin-top: -3rem;
+  }
+
+  .container img {
+    width: 4rem;
+    height: 4rem;
+    margin-right: 2rem;
+    object-fit: cover;
+  }
+
+  .radiobutton {
+    width: auto;
+    float: left;
+    padding: 20px;
+    border: none;
+  }
+
+  .radiobutton label {
+   color: white;
+ }
+
+
+  
+  .errorlist {
+    list-style: none;
+    margin: 0.5rem 0;
+    padding: 0;
+    color: rgb(175, 31, 31);
+  }
+  
+  .errors input {
+    border-color: rgb(175, 31, 31);
+    background-color: rgb(235, 174, 174);
+  }
+
+  #results-list {
+    position: relative;
+    top: -5rem;
+    margin-bottom: -3rem;
+  }

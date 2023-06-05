@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    Travel search
+{% endblock %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static "destinations/styles/destination.css" %}" />
+    <link rel="stylesheet" href="{% static "destinations/styles/all-destinations.css" %}" />
+    <link rel="stylesheet" href="{% static "destinations/styles/form.css" %}" />
+{% endblock %}
+
+{% block content %}
+<section id="all-posts">
+    <br>
+    <h2>Search for your dream travel destination!</h2>
+    <form method="POST">
+        {% csrf_token %}
+        <div class="container">
+            <div class="radiobutton">
+                {{ form.continent.label_tag }}
+                {{ form.continent }}
+            </div>
+            <div class="radiobutton">
+                {{ form.temperature.label_tag }}
+                {{ form.temperature }}
+            </div>
+            <div class="radiobutton">
+                {{ form.hotel_price.label_tag }}
+                {{ form.hotel_price }}
+            </div>
+            <div class="radiobutton {% if form.is_beach.errors %} errors {% endif %}">
+                {{ form.is_beach.label_tag }}
+                {{ form.is_beach }}
+            </div>
+            <div class="radiobutton {% if form.is_beach.errors %} errors {% endif %}">
+                {{ form.are_mountains.label_tag }}
+                {{ form.are_mountains }}
+            </div>
+        </div>
+        <div class="button-container">
+            <button type="submit">Search</button>
+            <button type="submit" name="reset_filters">Resetuj</button>
+        </div>
+    </form>
+
+    <section id="all-posts2">
+        <h2 id="results-list">Results matching your criteria:</h2>
+        <ul>
+            {% for item in search_result %}
+                {% include "destinations/includes/single-destination-preview.html"%}
+            {% endfor %}
+        </ul>
+    </section>
+
+</section>
+{% endblock %}
